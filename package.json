@@ -6,14 +6,13 @@
   "license": "https://themeforest.net/licenses/standard",
   "private": true,
   "scripts": {
+    "clean": "rimraf dist && rimraf node_modules",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "rimraf dist && git add . && git commit -am \"ready for deploy\" && git push && ng build",   
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy:surge": "surge",
-    "deploy:ghpages": "ng build --base-href ./ && npx angular-cli-ghpages --dir=dist",
-    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
+    "deploy": "npm run build && http-server dist --cors"
   },
   "dependencies": {
     "@angular-architects/module-federation": "^16.0.4",
@@ -63,7 +62,7 @@
     "karma-chrome-launcher": "3.2.0",
     "karma-coverage": "2.2.0",
     "karma-jasmine": "5.1.0",
-    "karma-jasmine-html-reporter": "2.0.0",
+    "karma-jasmine-html-reporter": "2.1.0",
     "lodash": "4.17.21",
     "ngx-build-plus": "^16.0.0",
     "postcss": "8.4.24",
