@@ -13,7 +13,7 @@ import { RouterLink } from '@angular/router';
     templateUrl  : './home.component.html',
     encapsulation: ViewEncapsulation.None,
     standalone   : true,
-    imports      : [MatButtonModule, RouterLink, MatIconModule,
+    imports      : [MatButtonModule, MatIconModule,
         MatIconModule,  CommonModule, FormsModule, ReactiveFormsModule, MatFormFieldModule,
         MatInputModule, MatRadioModule],
 })
