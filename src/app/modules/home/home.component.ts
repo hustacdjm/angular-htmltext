@@ -35,16 +35,26 @@ export class LandingHomeComponent implements AfterContentInit
    
 
     template={
-      "name": 'React Sample component',
-      "description":'react sample component',
-      "version": 'v1.0'
-    };
+  "name" : "HtmlText",
+  "description" : "show html text ",
+  "version" : "2.0"
+};
   
     reactiveComponent={
-
-      
-
-    };
+  "component" : {
+    "componentTemplateId" : "67b3aeef94d84c64a19d18fd",
+    "templateDeployId" : null,
+    "content" : {
+      "htmltext" : "<p>this component shows <strong>html text content</strong></p>"
+    },
+    "ui" : { },
+    "scores" : [ ]
+  },
+  "runtime" : {
+    "data" : { }
+  },
+  "constants" : { }
+};
 
 
 
@@ -57,8 +67,8 @@ export class LandingHomeComponent implements AfterContentInit
    
     async StartTest(){
       
-        const componentModule = await import('../component/Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00894fa5.component');
-        const TemplateComponent = componentModule['Component3121f9dfc5bb427ca055e6521008c7f95129a609d19b4df48659566e00894fa5'];
+        const componentModule = await import('../component/Component67b3b6a094d84c64a19d18fe25ed5d1468924f1caf23c5c23922c3de.component');
+        const TemplateComponent = componentModule['Component67b3b6a094d84c64a19d18fe25ed5d1468924f1caf23c5c23922c3de'];
 
         this.testContainer.clear();
 
